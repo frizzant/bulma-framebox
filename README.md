@@ -6,6 +6,13 @@ By default the box is at the bottom-right corner of the website.
 
 ![alt text](/image.png)
 
+## Why Do I Need It?
+
+Want to show some special content on your page?
+
+You could display **messages**, **ads**, **news**, or a lot more with ease
+and some bulma-swag.
+
 ## Dependencies
 Since the custom.sass/custom.css is built upon the **Bulma CSS Framework**,
 it is recommended to use this as your base. However if you want to write
