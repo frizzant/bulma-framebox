@@ -5,7 +5,7 @@ A dynamic fixed box to display news/hints/ads in a Bulma CSS fashion
 By default the box is at the bottom-right corner of the website.
 
 ## Dependencies
-Since the custom.sass/css is built upon the **Bulma CSS Framework**,
+Since the custom.sass/custom.css is built upon the **Bulma CSS Framework**,
 it is recommended to use this as your base. However if you want to write
 your own CSS, go ahead.
 The Javascript should keep working,
