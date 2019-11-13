@@ -45,7 +45,7 @@ You can directly modify the html inline-style (`width`).
 The `data-title` will be copied to the generated `framebox-clicker` boxes.
 It is not a required field, but there is no reason to keep it blank.
 
-Simply load the `script.js` file in the footer (after the HTML code) so
+Simply load the `framebox.js` file in the footer (after the HTML code) so
 it can find the necessary ids and classes it is looking for.
 
 Successful? Yes?
