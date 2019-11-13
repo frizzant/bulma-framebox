@@ -1,0 +1,25 @@
+#framebox-container {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+#framebox-container section {
+  margin-bottom: 0 !important;
+}
+#framebox-container .framebox-item {
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+#framebox-container .framebox-item.framebox-visible {
+  visibility: visible;
+  opacity: 100%;
+  height: inherit;
+  max-height: 500px;
+}
+
+/*# sourceMappingURL=cumstom.css.map */
