@@ -4,6 +4,8 @@ A dynamic fixed box to display news/hints/ads in a Bulma CSS fashion
 
 By default the box is at the bottom-right corner of the website.
 
+![alt text](/image.png)
+
 ## Dependencies
 Since the custom.sass/custom.css is built upon the **Bulma CSS Framework**,
 it is recommended to use this as your base. However if you want to write
