@@ -20,20 +20,20 @@ The recommended structure is the following:
 
 ```html
 <div id="framebox-container" class="card" style="width: 30%;">
-	<section class="section content column">
-		<div class="framebox-item framebox-visible" data-title="Title">
-			<h1>Title</h1>
-			<p>Text</p>
-		</div>
-		<div class="framebox-item" data-title="Title Two">
-			<h1>Title Two</h1>
-			<p>Text</p>
-		</div>
-		<div class="framebox-item" data-title="Title Three">
-			<h1>Title Three</h1>
-			<p>Text</p>
-		</div>
-	</section>
+    <section class="section content column">
+        <div class="framebox-item framebox-visible" data-title="Title">
+            <h1>Title</h1>
+            <p>Text</p>
+        </div>
+        <div class="framebox-item" data-title="Title Two">
+            <h1>Title Two</h1>
+            <p>Text</p>
+        </div>
+        <div class="framebox-item" data-title="Title Three">
+            <h1>Title Three</h1>
+            <p>Text</p>
+        </div>
+    </section>
 </div>
 ```
 
