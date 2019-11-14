@@ -4,7 +4,11 @@ A dynamic fixed box to display news/hints/ads in a Bulma CSS fashion
 
 By default the box is at the bottom-right corner of the website.
 
-![alt text](/image.png)
+![alt text](/images/image.png)
+
+Here a little sneak-peek:
+
+![alt text](/images/preview.gif)
 
 ## Why Do I Need It?
 
