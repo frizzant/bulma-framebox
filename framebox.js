@@ -1,11 +1,12 @@
 // --- Variables + Objects
 // ---
 let rotationInterval = false;
+let currentItemIndex = 0;
 let theFrameboxContainer = document.getElementById('framebox-container');
 let framebox = {
     container: theFrameboxContainer,
     items: theFrameboxContainer.querySelectorAll('.framebox-item'),
-    clicker: theFrameboxContainer.querySelectorAll('.framebox-item'),
+    // clicker: theFrameboxContainer.querySelectorAll('.framebox-item'),
     settings: {
         autoGenerate: true,
         rotate: true,
@@ -17,6 +18,7 @@ let framebox = {
 // --- END Variables
 let theClickEvent = (clickedItem) => {
 
+    let theClickerItem = document.querySelectorAll('footer .framebox-clicker');
     // if (typeof clickedItem === 'object') {
         console.log(clickedItem.innerHTML);
         let itemPosition = clickedItem.dataset.clickerId;
@@ -31,9 +33,21 @@ let theClickEvent = (clickedItem) => {
     }
     clickedItem.classList.add('active');
 
+    let iteration = 0;
+    for (let item of theClickerItem) {
+        if (item.classList.contains('active')) {
+            break;
+        };
+        iteration++;
+
+    }
+    currentItemIndex = iteration;
+
     // make the content visible/hidden
     theFrameboxContainer.querySelector('.framebox-visible').classList.remove('framebox-visible');
-    framebox.items[itemPosition].classList.add('framebox-visible');
+    framebox.items[iteration].classList.add('framebox-visible');
+
+    console.log("itemPosition: " + itemPosition + " currentItemIndex: " + currentItemIndex + ' iteration: ' + iteration);
 };
 
 let frameboxLoader = () => { // generate HTML footer
@@ -67,47 +81,46 @@ let frameboxLoader = () => { // generate HTML footer
 
             let frameboxFooter = framebox.container.querySelector('footer');
             frameboxFooter.addEventListener('mouseleave', () => {
-                console.log('mouseleave');
+                // console.log('mouseleave');
                 start();
             });
 
             frameboxFooter.addEventListener('mouseenter', () => {
-                console.log('mouseenter');
+                // console.log('mouseenter');
                 stop();
             });
 
             let start = () => {
                 // theClickEvent();
                 let clickerItem = framebox.container.querySelectorAll('footer .framebox-clicker');
-                console.log(clickerItem);
+                // console.log(clickerItem);
                 // clicker[2].click();
 
                 // let theActiveClicker = document.querySelector('#framebox-container footer .active');
                 // theActiveClicker.classList.remove('');
                 // if (typeof counter === "undefined") {
-                let counter = 0;
+                // let currentItemIndex = 0;
                 // }
 
                 if (rotationInterval !== false) {
                     clearInterval(rotationInterval);
                 }
                 rotationInterval = setInterval( function() { // Execture every X seconds for as long as it does not get cleared
-                    console.log(counter);
-                    if (counter === clickerItem.length) {
-                        counter = 0;
+                    // console.log(currentItemIndex);
+                    if (currentItemIndex === clickerItem.length) {
+                        currentItemIndex = 0;
                     }
 
                     for (let item of clickerItem) { // remove the .active classes and add it to the current item
                         item.classList.remove('active');
                     }
-                    clickerItem.item(counter).classList.add('active');
+                    clickerItem.item(currentItemIndex).classList.add('active');
 
                     for (let item of framebox.items) { // remove the .framebox-visible classes and add it to the current item
                         item.classList.remove('framebox-visible');
                     }
-                    framebox.items[counter].classList.add('framebox-visible');
-
-                    counter++;
+                    framebox.items[currentItemIndex].classList.add('framebox-visible');
+                    currentItemIndex++;
                 }, framebox.settings.rotateTimeout);
 
             };
