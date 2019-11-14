@@ -67,6 +67,27 @@ Then the `footer` will be generated, which will look a lot like this:
     <a href="#" data-clicker-id="2" class="framebox-clicker card-footer-item">Third</a>
 </footer>
 ```
+### Settings
+
+Currently you can tweak the JS settings directly within the `framebox.js` file.
+These are the default values.
+```javascript
+let framebox = {
+    // more stuff here
+    settings: {
+        autoGenerate: true,     // true | false 
+        rotate: true,           // true | false
+        rotateTimeout: 3000,    // number in ms          
+    },
+};
+```
+
+#### autoGenerate
+Switches the automatic `<footer>...</footer>` generation on or off.
+#### rotate
+Switches the automatic rotation of the framebox on or off. (Think of it in terms of a slider)
+#### rotateTimeout
+Sets the time in between each displayed item in milliseconds.
 
 ### Minimal Structure
 
