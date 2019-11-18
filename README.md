@@ -3,6 +3,7 @@
 A dynamic fixed box to display news/hints/ads in a Bulma CSS fashion
 
 By default the box is at the bottom-right corner of the website.
+It will stop cycling if you hover/touch over the element, or disable it in the settings.
 
 ![alt text](/images/image.png)
 
@@ -23,6 +24,8 @@ it is recommended to use this as your base. However if you want to write
 your own CSS, go ahead.
 The Javascript should keep working,
 if you keep the necessary ids/classes and HTML structure.
+
+Going Vanilla JS, **no JQuery needed**! Lightweight and totally free of any JS framework.
 
 Javascript version: **ES6**.
 _(rewriting it for crossbrowser compatibility and IE should be pretty simple.)_
