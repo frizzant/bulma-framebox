@@ -91,6 +91,20 @@ framebox = () => {
                     // console.log('mouseenter');
                     stop();
                 });
+                document.addEventListener('touch', function(event) { // listen for touches on document
+                    // console.log('mouseenter');
+                    let rect = theFrameboxContainer.getBoundingClientRect();
+                    let xCoordinate = event.touches[0].clientX - rect.left;
+                    let yCoordinate = event.touches[0].clientY - rect.top;
+
+                    if ((xCoordinate >= 0 && xCoordinate <= rect.width) && (yCoordinate >= 0 && yCoordinate <= rect.height)) { // if the coordinates are within the framebox element
+                        console.log('stop');
+                        stop();
+                    } else { // if outside the element
+                        start();
+                        console.log('start');
+                    }
+                });
 
                 let start = () => {
                     // theClickEvent();
