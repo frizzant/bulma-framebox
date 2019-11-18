@@ -11,7 +11,6 @@ framebox = () => {
             autoGenerate: true,
             rotate: true,
             rotateTimeout: 3000,
-            footerItemClass: '',
         },
     };
 // ---
