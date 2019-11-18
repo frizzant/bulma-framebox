@@ -50,7 +50,8 @@ framebox = () => {
         theFrameboxContainer.querySelector('.framebox-visible').classList.remove('framebox-visible');
         framebox.items[iteration].classList.add('framebox-visible');
 
-        console.log("itemPosition: " + itemPosition + " currentItemIndex: " + currentItemIndex + ' iteration: ' + iteration);
+        // console.log("itemPosition: " + itemPosition + " currentItemIndex: " + currentItemIndex + ' iteration: ' + iteration);
+        console.log(`itemPosition: ${itemPosition} currentItemIndex: ${currentItemIndex} iteration: ${iteration}`);
     };
 
     let frameboxLoader = () => { // generate HTML footer
@@ -70,7 +71,7 @@ framebox = () => {
                         } else {
                             activeClass = '';
                         }
-                        framebox.container.querySelector('footer').insertAdjacentHTML('beforeend', '<a href="#" data-clicker-id="' + frameboxItemIteration + '" class="framebox-clicker card-footer-item ' + activeClass + '">' + item.dataset.title + '</a>');
+                        framebox.container.querySelector('footer').insertAdjacentHTML('beforeend', `<a href="#" data-clicker-id="${frameboxItemIteration}" class="framebox-clicker card-footer-item ${activeClass}">${item.dataset.title}</a>`);
 
                         let theClickerItem = (document.querySelectorAll('footer .framebox-clicker'))[frameboxItemIteration];
                         theClickerItem.addEventListener('click', function (event) {
@@ -80,7 +81,7 @@ framebox = () => {
                         frameboxItemIteration++;
 
                         if (frameboxItemIteration === framebox.items.length) { // if last loop
-                            resolve('resolved');
+                            resolve();
                         }
                     }
                 });
@@ -95,7 +96,7 @@ framebox = () => {
         let rotateFramebox = () => {
 
             if (framebox.settings.rotate === true) {
-                console.log('rotating');
+                // console.log('rotating');
 
                 // let frameboxFooter = framebox.container.querySelector('footer');
                 theFrameboxContainer.addEventListener('mouseleave', () => {

@@ -1,5 +1,6 @@
 #framebox-container {
   position: fixed;
+  width: 30%;
   right: 0;
   bottom: 0;
 }
@@ -23,6 +24,22 @@
 }
 #framebox-container .framebox-clicker-container .framebox-clicker.active {
   background-color: rgba(0, 0, 0, 0.05);
+}
+
+@media screen and (max-width: 1216px) {
+  #framebox-container {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #framebox-container {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #framebox-container {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=custom.css.map */
