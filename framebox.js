@@ -7,26 +7,19 @@ framebox = () => {
     let framebox = {
         container: theFrameboxContainer,
         items: theFrameboxContainer.querySelectorAll('.framebox-item'),
-        // clicker: theFrameboxContainer.querySelectorAll('.framebox-item'),
         settings: {
             autoGenerate: true,
             rotate: true,
             rotateTimeout: 3000,
             footerItemClass: '',
         },
-        // visibleFramebox: theFrameboxContainer.querySelector('.framebox-visible'),
     };
 // ---
 // --- END Variables
     let theClickEvent = (clickedItem) => {
 
         let theClickerItem = document.querySelectorAll('footer .framebox-clicker');
-        // if (typeof clickedItem === 'object') {
-        console.log(clickedItem.innerHTML);
         let itemPosition = clickedItem.dataset.clickerId;
-        // } else {
-        //     let itemPosition;
-        // }
 
         // get active element from footer, remove class, and add it to the current element
         let theActiveClicker = document.querySelector('#framebox-container footer .active');
@@ -50,7 +43,6 @@ framebox = () => {
         theFrameboxContainer.querySelector('.framebox-visible').classList.remove('framebox-visible');
         framebox.items[iteration].classList.add('framebox-visible');
 
-        // console.log("itemPosition: " + itemPosition + " currentItemIndex: " + currentItemIndex + ' iteration: ' + iteration);
         console.log(`itemPosition: ${itemPosition} currentItemIndex: ${currentItemIndex} iteration: ${iteration}`);
     };
 
@@ -96,20 +88,15 @@ framebox = () => {
         let rotateFramebox = () => {
 
             if (framebox.settings.rotate === true) {
-                // console.log('rotating');
 
-                // let frameboxFooter = framebox.container.querySelector('footer');
                 theFrameboxContainer.addEventListener('mouseleave', () => {
-                    // console.log('mouseleave');
                     start();
                 });
 
                 theFrameboxContainer.addEventListener('mouseenter', () => {
-                    // console.log('mouseenter');
                     stop();
                 });
                 document.addEventListener('touch', function(event) { // listen for touches on document
-                    // console.log('mouseenter');
                     let rect = theFrameboxContainer.getBoundingClientRect();
                     let xCoordinate = event.touches[0].clientX - rect.left;
                     let yCoordinate = event.touches[0].clientY - rect.top;
@@ -124,22 +111,12 @@ framebox = () => {
                 });
 
                 let start = () => {
-                    // theClickEvent();
                     let clickerItem = framebox.container.querySelectorAll('footer .framebox-clicker');
-                    // console.log(clickerItem);
-                    // clicker[2].click();
-
-                    // let theActiveClicker = document.querySelector('#framebox-container footer .active');
-                    // theActiveClicker.classList.remove('');
-                    // if (typeof counter === "undefined") {
-                    // let currentItemIndex = 0;
-                    // }
 
                     if (rotationInterval !== false) {
                         clearInterval(rotationInterval);
                     }
                     rotationInterval = setInterval(function () { // Execture every X seconds for as long as it does not get cleared
-                        // console.log(currentItemIndex);
                         if (currentItemIndex === clickerItem.length) {
                             currentItemIndex = 0;
                         }
@@ -167,7 +144,6 @@ framebox = () => {
 
             }
         };
-        // rotateFramebox();
     };
     frameboxLoader();
 };
