@@ -35,7 +35,7 @@ _(rewriting it for crossbrowser compatibility and IE should be pretty simple.)_
 The recommended structure is the following:
 
 ```html
-<div id="framebox-container" class="card" style="width: 30%;">
+<div id="framebox-container" class="card">
     <section class="section content column">
         <div class="framebox-item framebox-visible" data-title="Title">
             <h1>Title</h1>
@@ -101,7 +101,7 @@ Sets the time in between each displayed item in milliseconds.
 This is the minimal structure needed to keep the script running how it was supposed to:
 
 ```HTML
-<div id="framebox-container" style="width: 30%;">
+<div id="framebox-container">
     <div class="framebox-item framebox-visible" data-title="Title"><!--your html--></div>
     <div class="framebox-item" data-title="Title"><!--your html--></div>
     <div class="framebox-item" data-title="Title"><!--your html--></div>
