@@ -25,7 +25,7 @@ your own CSS, go ahead.
 The Javascript should keep working,
 if you keep the necessary ids/classes and HTML structure.
 
-Going Vanilla JS, **no JQuery needed**! Lightweight and totally free of any JS framework.
+Going Vanilla JS, **no JQuery needed**! Lightweight and totally free of any JS frameworks.
 
 Javascript version: **ES6**.
 _(rewriting it for crossbrowser compatibility and IE should be pretty simple.)_
