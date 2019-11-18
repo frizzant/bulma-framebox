@@ -12,6 +12,7 @@ framebox = () => {
             autoGenerate: true,
             rotate: true,
             rotateTimeout: 3000,
+            footerItemClass: '',
         },
         // visibleFramebox: theFrameboxContainer.querySelector('.framebox-visible'),
     };
@@ -55,25 +56,40 @@ framebox = () => {
     let frameboxLoader = () => { // generate HTML footer
 
         if (framebox.items.length > 0 && framebox.settings.autoGenerate === true) { // Generate footer if autoGenerate is set to true
-            framebox.container.insertAdjacentHTML('beforeend', '<footer class="framebox-clicker-container card-footer"></footer>');
 
+            framebox.container.insertAdjacentHTML('beforeend', '<footer class="framebox-clicker-container card-footer"></footer>');
             let frameboxItemIteration = 0;
             let activeClass;
-            for (let item of framebox.items) {
-                if (frameboxItemIteration === 0) {
-                    activeClass = 'active';
-                } else {
-                    activeClass = '';
-                }
-                framebox.container.querySelector('footer').insertAdjacentHTML('beforeend', '<a href="#" data-clicker-id="' + frameboxItemIteration + '" class="framebox-clicker card-footer-item ' + activeClass + '">' + item.dataset.title + '</a>');
 
-                let theClickerItem = (document.querySelectorAll('footer .framebox-clicker'))[frameboxItemIteration];
-                theClickerItem.addEventListener('click', function (event) {
-                    theClickEvent(this); // give element to function
+            let generateHTML = () => {
+                return new Promise((resolve) => { // setting up a PROMISE
+
+                    for (let item of framebox.items) {
+                        if (frameboxItemIteration === 0) {
+                            activeClass = 'active';
+                        } else {
+                            activeClass = '';
+                        }
+                        framebox.container.querySelector('footer').insertAdjacentHTML('beforeend', '<a href="#" data-clicker-id="' + frameboxItemIteration + '" class="framebox-clicker card-footer-item ' + activeClass + '">' + item.dataset.title + '</a>');
+
+                        let theClickerItem = (document.querySelectorAll('footer .framebox-clicker'))[frameboxItemIteration];
+                        theClickerItem.addEventListener('click', function (event) {
+                            theClickEvent(this); // give element to function
+                        });
+
+                        frameboxItemIteration++;
+
+                        if (frameboxItemIteration === framebox.items.length) { // if last loop
+                            resolve('resolved');
+                        }
+                    }
                 });
-
-                frameboxItemIteration++;
-            }
+            };
+            generateHTML().then( // making sure the HTML is generated before the framebox rotation starts
+                () => {
+                    rotateFramebox();
+                }
+            );
         }
 
         let rotateFramebox = () => {
@@ -101,8 +117,8 @@ framebox = () => {
                         console.log('stop');
                         stop();
                     } else { // if outside the element
-                        start();
                         console.log('start');
+                        start();
                     }
                 });
 
@@ -150,7 +166,7 @@ framebox = () => {
 
             }
         };
-        rotateFramebox();
+        // rotateFramebox();
     };
     frameboxLoader();
 };
