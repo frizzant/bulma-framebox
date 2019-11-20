@@ -7,7 +7,7 @@ It will stop cycling if you hover/touch over the element, or disable it in the s
 
 ![alt text](/images/framebox.jpg)
 
-Here a little sneak-peek:
+Here a little sneak-peek (gif):
 
 ![alt text](/images/preview.gif)
 
