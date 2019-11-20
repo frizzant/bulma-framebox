@@ -30,7 +30,7 @@ Going Vanilla JS, **no JQuery needed**! Lightweight and totally free of any JS f
 Javascript version: **ES6**.
 _(rewriting it for crossbrowser compatibility and IE should be pretty simple.)_
 
-## Setup
+## Normal Setup
 
 The recommended structure is the following:
 
@@ -74,6 +74,11 @@ Then the `footer` will be generated, which will look a lot like this:
     <a href="#" data-clicker-id="2" class="framebox-clicker card-footer-item">Third</a>
 </footer>
 ```
+
+## via npm
+
+`npm install bulma-framebox`
+
 ### Settings
 
 Currently you can tweak the JS settings directly within the `framebox.js` file.
