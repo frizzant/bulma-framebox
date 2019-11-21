@@ -1,7 +1,11 @@
 # bulma-framebox
 
-[create an anchor]()
-[create an anchor](#anchors-in-markdown)
+- [Why Do I need It?](#why)
+- [Dependencies](#dependencies)
+- [Normal Setup](#setup)
+- [NPM Setup](#npm-setup)
+- [Settings](#settings)
+- [Minimal Structure](#minimal)
 
 (#anchors-in-markdown)
 
@@ -16,14 +20,14 @@ Here a little sneak-peek (gif):
 
 ![alt text](/images/preview.gif)
 
-## Why Do I Need It?
+## Why Do I Need It? <a name="why"></a>
 
 Want to show some special content on your page?
 
 You could display **messages**, **ads**, **news**, or a lot more with ease
 and some bulma-swag.
 
-## Dependencies
+## Dependencies <a name="dependencies"></a>
 Since the custom.sass/custom.css is built upon the **Bulma CSS Framework**,
 it is recommended to use this as your base. However if you want to write
 your own CSS, go ahead.
@@ -35,7 +39,7 @@ Going Vanilla JS, **no JQuery needed**! Lightweight and totally free of any JS f
 Javascript version: **ES6**.
 _(rewriting it for crossbrowser compatibility and IE should be pretty simple.)_
 
-## Normal Setup
+## Normal Setup <a name="setup"></a>
 
 The recommended structure is the following:
 
@@ -80,11 +84,11 @@ Then the `footer` will be generated, which will look a lot like this:
 </footer>
 ```
 
-## via npm
+## via npm <a name="npm-setup"></a>
 
 `npm install bulma-framebox`
 
-### Settings
+### Settings <a name="settings"></a>
 
 Currently you can tweak the JS settings directly within the `framebox.js` file.
 These are the default values.
@@ -106,7 +110,7 @@ Switches the automatic rotation of the framebox on or off. (Think of it in terms
 #### rotateTimeout
 Sets the time in between each displayed item in milliseconds.
 
-### Minimal Structure
+### Minimal Structure <a name="minimal"></a>
 
 This is the minimal structure needed to keep the script running how it was supposed to:
 
