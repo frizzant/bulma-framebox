@@ -1,6 +1,11 @@
 # bulma-framebox
 
-A dynamic fixed box to display news/hints/ads in a Bulma CSS fashion
+[create an anchor]()
+[create an anchor](#anchors-in-markdown)
+
+(#anchors-in-markdown)
+
+A dynamic fixed box to display news/hints/ads in a Bulma CSS fashion.
 
 By default the box is at the bottom-right corner of the website.
 It will stop cycling if you hover/touch over the element, or disable it in the settings.
