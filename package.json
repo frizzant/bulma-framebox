@@ -1,0 +1,24 @@
+{
+  "name": "bulma-framebox",
+  "version": "0.0.5",
+  "description": "another Bulma CSS extension that displays any information at the bottom of your website.",
+  "main": "framebox.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frizzant/bulma-framebox.git"
+  },
+  "keywords": [
+    "Bulma",
+    "extension",
+    "framebox"
+  ],
+  "author": "Erin McGowan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frizzant/bulma-framebox/issues"
+  },
+  "homepage": "https://github.com/frizzant/bulma-framebox#readme"
+}
