@@ -1,6 +1,6 @@
 {
   "name": "bulma-framebox",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "another Bulma CSS extension that displays any information at the bottom of your website.",
   "main": "framebox.js",
   "scripts": {
